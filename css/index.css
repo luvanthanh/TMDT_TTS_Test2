@@ -28,6 +28,12 @@
   text-transform: uppercase;
 }
 
+.brand1, .brand2 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
 .hero-desc {
   color: var(--gray-text);
   margin-bottom: 30px;
@@ -397,14 +403,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px 22px;
-  }
-  .brands-banner .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    gap: 8px 0;
+    gap: 8px px;
   }
 
   .brand-versace,
@@ -412,24 +412,21 @@
   .brand-gucci,
   .brand-prada,
   .brand-calvin {
-    flex: 0 0 auto;
     text-align: center;
-    line-height: 1.2;
+    line-height: 1.1;
+    margin: 0;
+    font-size: 20px;
   }
 
   .brand-versace,
   .brand-zara,
   .brand-gucci {
-    width: 33.333%;
+    flex: 0 0 calc(32.333% - 12px);
   }
 
   .brand-prada,
   .brand-calvin {
-    width: 50%;
-  }
-
-  .brand-versace, .brand-zara, .brand-gucci, .brand-prada, .brand-calvin {
-    font-size: 20px;
+    flex: 0 0 calc(50% - 12px);
   }
 
   .brand-zara { font-size: 26px; }
@@ -504,11 +501,12 @@
     gap: 8px 18px;
   }
   .brand-versace, .brand-zara, .brand-gucci {
-    flex-basis: 33.333%;
+    flex-basis: calc(23.333% - 12px);
   }
   .brand-prada, .brand-calvin {
-    flex-basis: 50%;
+    flex-basis: calc(30% - 12px);
   }
+
   .products-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .section-title { font-size: 24px; margin: 40px 0 20px 0; }
   .dress-style { padding: 20px 10px; margin-top: 40px; border-radius: 15px; }
