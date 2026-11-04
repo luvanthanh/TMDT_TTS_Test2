@@ -404,7 +404,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 8px px;
+    gap: 8px 12px;
   }
 
   .brand-versace,
@@ -421,7 +421,7 @@
   .brand-versace,
   .brand-zara,
   .brand-gucci {
-    flex: 0 0 calc(32.333% - 12px);
+    flex: 0 0 calc(33.333% - 12px);
   }
 
   .brand-prada,
@@ -433,9 +433,25 @@
   .brand-prada { font-size: 24px; letter-spacing: 2px; }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
   .section-title { font-size: 32px; }
-  .testimonials-header { align-items: center; }
-  .testimonials-header .section-title { font-size: 28px; }
-  .testimonial-card { flex: 0 0 100%; width: 100%; min-width: 0; padding: 25px; }
+  .testimonials-header {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+  }
+  .testimonials-header .section-title {
+    font-size: 28px;
+    flex: 1;
+    margin-bottom: 0;
+  }
+  .testimonials-arrows {
+    margin-bottom: 0;
+  }
+  .testimonial-card {
+    flex: 0 0 calc(50% - 10px);
+    width: calc(50% - 10px);
+    min-width: 0;
+    padding: 25px;
+  }
   .dress-style {
     padding: 30px 15px;
     border-radius: 20px;
@@ -516,7 +532,12 @@
   .testimonials-section { margin: 40px auto; }
   .testimonials-header { flex-direction: column; align-items: flex-start; gap: 10px; margin-bottom: 20px; }
   .testimonials-header .section-title { font-size: 22px; }
-  .testimonial-card { flex: 0 0 100%; width: 100%; min-width: 0; padding: 20px; }
+  .testimonial-card {
+    flex: 0 0 calc(50% - 10px);
+    width: calc(50% - 10px);
+    min-width: 0;
+    padding: 20px;
+  }
   .customer-name { font-size: 16px; }
   .customer-review { font-size: 14px; }
   .view-all-btn { margin: 20px auto; }
